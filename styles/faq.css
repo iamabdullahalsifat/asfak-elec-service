@@ -1,0 +1,63 @@
+._faqSection{
+  padding: 0 0 30px 0;
+}
+._faqSection ._faqContent{
+  max-width: 800px;
+  margin: auto;
+  padding: 0px 15px;
+}
+._faqContent ._header{
+  margin-bottom: 8px;
+}
+._faqContent ._header h2{
+  color: rgb(43, 43, 214);
+  font-weight: 500;
+}
+._faqContent ._faq{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+._faq ._faqItem{
+  background-color: var(--white-color);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+}
+._faqItem ._faqHeading{
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 15px;
+  cursor: pointer;
+}
+._faqHeading h3{
+  margin-top: 5px;
+}
+._faqHeading ._faqIcon{
+  background-color: var(--link-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 12px;
+  border-radius: 50px;
+  font-size: 20px;
+  color: var(--white-color);
+}
+._faqItem ._faqParagraph{
+  overflow: hidden;
+  height: 0;
+  transition: height 0.3s ease;
+}
+._faqItem ._faqParagraph p{
+  border-top: 1px solid var(--border-color);
+  padding: 8px 15px 4px;
+}
+._faqItem ._faqParagraph ul{
+  padding: 5px 45px;
+}
+
+@media screen and (max-width: 768px){
+  ._faqContent ._header h2{
+    text-align: center;
+    margin-bottom: 10px;
+  }
+}
