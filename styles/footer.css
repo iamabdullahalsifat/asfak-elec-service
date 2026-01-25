@@ -1,11 +1,121 @@
 footer{
   background-color: #1e1f33;
-  padding: 25px 0 10px;
+  padding: 0px 0 10px;
 }
 
 footer *{
   color: white;
 }
+
+._needHelp{
+  background: linear-gradient(
+    120deg,
+    #0b1020 0%,
+    #3a0b16 25%,
+    #6b0f1a 50%,
+    #3a0b16 75%,
+    #0b1020 100%
+  );
+  padding: 120px 0;
+}
+._needHelp .__container{
+  max-width: 800px;
+  margin: auto;
+  padding: 0 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 35px;
+}
+._needHelp .__container ._topIcon{
+  background-color: #e23b3b;
+  padding: 18px;
+  border-radius: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+._needHelp .__container ._topIcon svg{
+  font-size: 40px;
+}
+._needHelp .__container .__hero{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 14px;
+}
+._needHelp .__container .__hero h2{
+  font-size: 30px;
+  font-weight: 600;
+}
+._needHelp .__container .__hero ._long{
+  font-size: 20px;
+  opacity: 0.9;
+}
+._needHelp .__container .__hero ._small{
+  font-size: 16px;
+  opacity: 0.7;
+}
+._needHelp .__container ._btn{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+._needHelp .__container ._btn button{
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+._needHelp .__container ._btn button span{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  padding: 15px 30px;
+  border-radius: 10px;
+}
+._needHelp .__container ._btn button span{
+  font-size: 20px;
+}
+._needHelp .__container ._btn button span svg{
+  font-size: 20px;
+}
+._needHelp .__container ._btn ._one span{
+  background-color: #db2626;
+}
+._needHelp .__container ._btn ._two span{
+  border: 2px solid #ec5b5b;
+  color: #ec5b5b;
+}
+._needHelp .__container ._btn ._two span *{
+  color: #ec5b5b;
+}
+._needHelp .__container ._bottom{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+._needHelp .__container ._bottom div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+._needHelp .__container ._bottom div p{
+  font-size: 15px;
+  opacity: 0.7;
+}
+._needHelp .__container ._bottom svg{
+  font-size: 20px;
+}
+
+/* == */
 
 ._footerContainer ._info{
   max-width: 1200px;
@@ -95,5 +205,15 @@ footer *{
   }
   ._footerContainer ._copyright{
     padding: 20px 15px 10px;
+  }
+}
+
+@media screen and (max-width: 600px){
+  ._needHelp .__container ._btn{
+    flex-direction: column;
+    width: 100%;
+  }
+  ._needHelp .__container ._btn button{
+    width: 100%;
   }
 }

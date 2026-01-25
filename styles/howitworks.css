@@ -1,0 +1,83 @@
+._howItWorks{
+  margin-bottom: 40px;
+}
+
+._howItWorks .__container{
+  max-width: 800px;
+  margin: auto;
+  padding: 0 15px;
+}
+._howItWorks .__container .__heading{
+  color: rgb(43, 43, 214);
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+._howItWorks .__container .__hero{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+._howItWorks .__container .__hero h3{
+  font-size: 30px;
+  text-align: center;
+  opacity: 0.9;
+}
+._howItWorks .__container .__hero p{
+  text-align: center;
+  opacity: 0.8;
+}
+
+._howItWorks .__container ._card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 1px solid rgb(218, 211, 211);
+  border-radius: 10px;
+  margin-top: 20px;
+}
+._howItWorks .__container ._card .__box{
+  padding: 20px;
+  border-right: 1px solid rgb(218, 211, 211);
+}
+._howItWorks .__container ._card .__box:last-child{
+  border: none;
+}
+._howItWorks .__container ._card .__box .__text{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+._howItWorks .__container ._card .__box .__text span{
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(218, 211, 211);
+  display: inline-flex;
+  padding: 2px 20px;
+  border-radius: 12px;
+}
+._howItWorks .__container ._card .__box .__text h4{
+  font-size: 18px;
+  opacity: 0.9;
+}
+._howItWorks .__container ._card .__box .__text p{
+  font-size: 15px;
+  opacity: 0.7;
+}
+
+
+@media screen and (max-width: 768px) {
+  ._howItWorks .__container .__heading{
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 605px){
+  ._howItWorks .__container ._card{
+    flex-direction: column;
+  }
+  ._howItWorks .__container ._card .__box{
+    border-right: none;
+    border-bottom: 1px solid rgb(218, 211, 211);
+  }
+}
