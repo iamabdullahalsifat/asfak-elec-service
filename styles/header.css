@@ -220,19 +220,16 @@ header ._headerHero *{
 }
 
 ._headerHero .__content .__headerHeroSmallBox{
-  margin-top: 80px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin-top: 60px;
 }
 
 ._headerHero .__content .__headerHeroSmallBox .__content_7rX{
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
   align-items: center;
   background-color: #2d3042;
   padding: 25px 50px;
-  gap: 40px;
+  gap: 20px;
   border-radius: 20px;
   border: 1px solid rgb(70, 68, 68);
 }
@@ -321,5 +318,17 @@ header ._headerHero *{
 
   ._headerNav .__content .__right ._btn{
     display: none;
+  }
+
+  ._headerHero .__content ._bottomNav .__content_84X{
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+}
+
+@media screen and (max-width: 660px){
+  ._headerHero .__content .__headerHeroSmallBox .__content_7rX{
+    grid-template-columns: auto auto;
   }
 }
