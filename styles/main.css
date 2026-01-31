@@ -5,13 +5,13 @@
   font-size: 20px;
   font-weight: normal;
   font-family: 'banglaFont', sans-serif;
-  color: var(--text-color);
   user-select: none;
+  color: var(--textColorTwo);
 }
 /* == Font Setting == */
 @font-face {
   font-family: 'banglaFont';
-  src: url('/assets/fonts/bangla-font.ttf') format('truetype');
+  src: url('../assets/fonts/bangla-font.ttf') format('truetype');
   font-display: swap;
   /* unicode-range: U+0980-09FF; */
 }
