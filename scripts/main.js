@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
       headerNavContent.classList.add('show');
       headerNavOpenMenu.classList.add('active');
       headerNavCloseMenu.classList.add('active');
-      mainHeaderNav.style.backgroundColor = 'rgb(54, 30, 30)';
+      mainHeaderNav.classList.add('activeColor')
     })
   }
 
@@ -19,9 +19,17 @@ document.addEventListener('DOMContentLoaded', () => {
       headerNavContent.classList.remove('show');
       headerNavOpenMenu.classList.remove('active');
       headerNavCloseMenu.classList.remove('active');
-      mainHeaderNav.style.backgroundColor = '';
+      mainHeaderNav.classList.remove('activeColor')
     })
   }
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY >= 100) {
+      mainHeaderNav.classList.add('active')
+    } else {
+      mainHeaderNav.classList.remove('active')
+    }
+  });
 
 })
 
