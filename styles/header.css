@@ -25,9 +25,9 @@ header::before {
   mix-blend-mode: screen;     /* optional: glow-টা আরও cyber মতো লাগবে (চেষ্টা করে দেখুন) */
 }
 
-/* header ._headerNav{
-  background-color: rgb(54, 30, 30);
-} */
+header ._headerNav{
+  z-index: 99999;
+}
 
 header ._headerNav .__content{
   max-width: 1200px;
@@ -109,6 +109,7 @@ header ._headerHero *{
 ._headerHero .__content{
   max-width: 800px;
   margin: 80px auto 30px;
+  padding: 0 15px;
 }
 
 ._headerHero .__content .__topAlert{
@@ -150,7 +151,7 @@ header ._headerHero *{
 ._headerHero .__content ._headerHeadingTag .__contentX_38{
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px;
   position: relative;
 }
 
@@ -165,16 +166,93 @@ header ._headerHero *{
 ._headerHero .__content ._headerHeadingTag .__contentX_38 h1::after {
   content: '';
   position: absolute;
-  bottom: -15px;                /* একটু নিচে নামান যাতে ভালো লাগে */
-  left: 20%;                      /* ← left: 50% এর বদলে left:0 + right:0 দিন */
-  right: 20%;                     /* ← এতে পুরো টেক্সটের width কভার করবে */
-  height: 30px;                 /* মোটা করুন যাতে বড় লাগে */
+  bottom: -18px;
+  left: 35%;
+  right: 35%;
+  height: 30px;
   background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 120" preserveAspectRatio="none"><defs><linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="%23f97316"/><stop offset="50%" stop-color="%23e86f5a"/><stop offset="100%" stop-color="%23ef4444"/></linearGradient></defs><path d="M0 60 Q 250 10 500 60 T 1000 60" fill="none" stroke="url(%23grad)" stroke-width="16" stroke-linecap="round"/></svg>') no-repeat center bottom;
-  background-size: 100% 100%;   /* stretch করে পুরো width নেবে */
+  background-size: 100% 100%;
   opacity: 0.95;
   pointer-events: none;
 }
 
+._headerHero .__content ._headerHeroBtn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+._headerHero .__content ._headerHeroBtn a button{
+  background-color: #a13535;
+  border: none;
+  outline: none;
+  padding: 8px 30px;
+  border-radius: 18px;
+  font-size: 25px;
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+}
+
+._headerHero .__content ._headerHeroBtn a button:hover{
+  background-color: #af4444;
+}
+
+._headerHero .__content ._bottomNav{
+  margin-top: 50px;
+}
+
+._headerHero .__content ._bottomNav .__content_84X{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+._headerHero .__content ._bottomNav .__content_84X div{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+._headerHero .__content ._bottomNav .__content_84X div p{
+  opacity: 0.7;
+}
+
+._headerHero .__content .__headerHeroSmallBox{
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+._headerHero .__content .__headerHeroSmallBox .__content_7rX{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2d3042;
+  padding: 25px 50px;
+  gap: 40px;
+  border-radius: 20px;
+  border: 1px solid rgb(70, 68, 68);
+}
+
+._headerHero .__content .__headerHeroSmallBox .__content_7rX div{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+._headerHero .__content .__headerHeroSmallBox .__content_7rX div h4{
+  font-size: 44px;
+  font-weight: bold;
+}
+
+._headerHero .__content .__headerHeroSmallBox .__content_7rX div p{
+  font-size: 17px;
+  opacity: 0.8;
+}
 
 @keyframes pulse {
   0% {
@@ -213,6 +291,7 @@ header ._headerHero *{
     justify-content: center;
     align-items: center;
     transition: 0.3s ease-in-out;
+    z-index: 99999;
   }
 
   ._headerNav .__content .__nav.show{
