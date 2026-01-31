@@ -33,10 +33,20 @@ header ._headerNav.active{
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: rgb(54, 30, 30);
+  background-image: linear-gradient(
+    to bottom right,
+    #3c2035,
+    #382131,
+    #4b2838  
+  );
 }
 header ._headerNav.activeColor{
-  background-color: rgb(54, 30, 30);
+  background-image: linear-gradient(
+    to bottom right,
+    #3c2035,
+    #382131,
+    #4b2838  
+  );
 }
 
 header ._headerNav .__content{
@@ -291,7 +301,12 @@ header ._headerHero *{
     left: 0;
     top: 60px;
     width: 100%;
-    background-color: rgb(54, 30, 30);
+    background-image: linear-gradient(
+      to bottom right,
+      #3c2035,
+      #382131,
+      #4b2838  
+    );
     height: 0;
     overflow: hidden;
     display: flex;
