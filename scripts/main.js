@@ -1,5 +1,6 @@
 // ============== Header ==================== //
 document.addEventListener('DOMContentLoaded', () => {
+  let mainHeaderNav = document.getElementById('headerNav_');
   let headerNavContent = document.getElementById('headerNavContent_');
   let headerNavOpenMenu = document.getElementById('openMenu_');
   let headerNavCloseMenu = document.getElementById('closeMenu_');
@@ -9,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
       headerNavContent.classList.add('show');
       headerNavOpenMenu.classList.add('active');
       headerNavCloseMenu.classList.add('active');
+      mainHeaderNav.style.backgroundColor = 'rgb(54, 30, 30)';
     })
   }
 
@@ -17,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
       headerNavContent.classList.remove('show');
       headerNavOpenMenu.classList.remove('active');
       headerNavCloseMenu.classList.remove('active');
+      mainHeaderNav.style.backgroundColor = '';
     })
   }
 

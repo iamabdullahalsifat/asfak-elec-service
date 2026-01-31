@@ -296,7 +296,7 @@ header ._headerHero *{
   }
 
   ._headerNav .__content .__nav ul{
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     border-radius: 15px;
     height: 80%;
     width: 95%;
