@@ -1,175 +1,246 @@
-header{
-  /* background-image: url(/assets/brand/banner-bgsdf.svg); */
-  /* background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%); */
-  
-  width: 100%;
-  /* min-height: 70vh; */
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+header {
+  /* মেইন gradient – হুবহু একই */
+  background-image: linear-gradient(
+    to bottom right,
+    #020617,
+    #0f172a,
+    #450a0a 
+  );
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: 
+    radial-gradient(at 40% 20%, rgba(248, 113, 113, 0.3) 0px, transparent 50%),
+    radial-gradient(at 80% 0%, rgba(185, 28, 28, 0.2) 0px, transparent 50%),
+    radial-gradient(at 0% 50%, rgba(239, 68, 68, 0.2) 0px, transparent 50%),
+    radial-gradient(at 80% 50%, rgba(220, 38, 38, 0.15) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(248, 113, 113, 0.2) 0px, transparent 50%);
+  pointer-events: none;
+  z-index: 1;                 /* content-এর উপরে না থাকলে z-index adjust করুন */
+  mix-blend-mode: screen;     /* optional: glow-টা আরও cyber মতো লাগবে (চেষ্টা করে দেখুন) */
 }
 
-/* Header Nav */
-header ._nav{
-  z-index: 999999;
-  background-color: white;
-}
-header ._nav ._navContent{
+/* header ._headerNav{
+  background-color: rgb(54, 30, 30);
+} */
+
+header ._headerNav .__content{
   max-width: 1200px;
+  height: 60px;
+  padding: 0 15px;
   margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 15px;
 }
-._navContent ._logo span{
+
+header ._headerNav *{
+  color: var(--textColorTwo);
+}
+
+._headerNav .__content .__logo{
+  width: 25%;
+}
+
+._headerNav .__content .__logo span{
   font-size: 25px;
 }
-._navContent ._navLink ul{
+
+._headerNav .__content .__nav{
+  width: 50%;
+}
+
+._headerNav .__content .__nav ul{
   display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 20px;
 }
-._navContent ._navLink ._navBtn{
-  background-color: rgb(103, 211, 93);
-  color: white;
-  padding: 8px 30px;
-  border-radius: 12px;
+
+._headerNav .__content .__right{
+  width: 25%;
+  text-align: right;
 }
-._navContent ._openIcon, ._navContent ._closeIcon{
-  cursor: pointer;
-  background-color: white;
+
+._headerNav .__content .__right ._topMenuBtn{
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
-  border-radius: 25px;
-  padding: 5px;
+}
+
+._headerNav .__content .__right ._topMenuBtn .openMenu_, ._headerNav .__content .__right ._topMenuBtn .closeMenu_{
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
   display: none;
 }
 
-/* Header Hero */
-header ._headerHero{
-  background-image: 
-    linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.8),
-      rgba(0, 0, 0, 0)
-    ),
-    url("/assets/brand/header-hero.jpg");
-  height: 500px;
+._headerNav .__content .__right ._btn{
+  background-color: var(--textColorTwo);
+  display: inline-block;
+  color: black;
+  padding: 4px 24px;
+  border-radius: 8px;
+  cursor: pointer;
 }
-header ._headerHero ._headerHeroContent{
-  max-width: 1200px;
-  margin: auto;
-  padding: 10px 15px;
+
+._headerNav .__content .__right ._btn div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
-._headerHero ._headerHeading{
+
+._headerNav .__content .__right ._btn span{
+  color: var(--textColorOne);
+}
+
+/* ============= */
+header ._headerHero *{
+  color: var(--textColorTwo);
+}
+
+._headerHero .__content{
+  max-width: 800px;
+  margin: 80px auto 30px;
+}
+
+._headerHero .__content .__topAlert{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+._headerHero .__content .__topAlert div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: rgba(51, 51, 53, 0.2);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(90, 86, 86, 0.38);
+  border-radius: 20px;
+  padding: 8px 25px;
+}
+
+._headerHero .__content .__topAlert ._onlineAlert{
+  width: 8px;
+  height: 8px;
+  background-color: #10b981;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.4);
+  animation: pulse 1s infinite;
+}
+
+._headerHero .__content ._headerHeadingTag{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+._headerHero .__content ._headerHeadingTag .__contentX_38{
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  height: 100%;
-}
-._headerHero ._headerHeading h1{
-  font-size: 40px;
-  font-weight: 600;
-  color: white;
-  text-align: center;
-}
-._headerHero ._headerHeading p{
-  font-size: 16px;
-  color: white;
-  opacity: 0.8;
-  text-align: center;
+  gap: 20px;
+  position: relative;
 }
 
-/* == Company == */
-._company{
-  padding: 0px 15px;
-}
-._company ._companyLogo{
-  background-color: rgb(255, 255, 255);
-  max-width: 1200px;
+._headerHero .__content ._headerHeadingTag .__contentX_38 h1{
+  font-size: 50px;
+  max-width: 600px;
   margin: auto;
-  height: 110px;
-  border-radius: 8px;
-  margin-top: -55px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-  display: flex;
-  gap: 30px;
-  justify-content: center;
-  align-items: center;
-}
-._companyLogo img{
-  width: 60px;
-  height: 60px;
-  filter: grayscale(100%) brightness(1.2);
-  opacity: 0.7;
-}
-._companyLogo ._kohinoorImg img{
-  filter: brightness(0.3);
+  position: relative;
+  display: inline-block;
 }
 
-/* == 1200 == */
-@media screen and (max-width: 1200px){
-  header{
-    min-height: 100%;
+._headerHero .__content ._headerHeadingTag .__contentX_38 h1::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;                /* একটু নিচে নামান যাতে ভালো লাগে */
+  left: 20%;                      /* ← left: 50% এর বদলে left:0 + right:0 দিন */
+  right: 20%;                     /* ← এতে পুরো টেক্সটের width কভার করবে */
+  height: 30px;                 /* মোটা করুন যাতে বড় লাগে */
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 120" preserveAspectRatio="none"><defs><linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="%23f97316"/><stop offset="50%" stop-color="%23e86f5a"/><stop offset="100%" stop-color="%23ef4444"/></linearGradient></defs><path d="M0 60 Q 250 10 500 60 T 1000 60" fill="none" stroke="url(%23grad)" stroke-width="16" stroke-linecap="round"/></svg>') no-repeat center bottom;
+  background-size: 100% 100%;   /* stretch করে পুরো width নেবে */
+  opacity: 0.95;
+  pointer-events: none;
+}
+
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
   }
-  header ._headerHero{
-    padding-bottom: 100px;
+  70% {
+    box-shadow: 0 0 0 5px rgba(16, 185, 129, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
   }
 }
 
-@media screen and (max-width: 764px) {
-  
-  ._navContent ._navLink{
-    position: fixed;
-    top: 0;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+@media screen and (max-width: 768px) {
+  ._headerNav .__content .__right ._topMenuBtn .openMenu_{
+    display: flex;
+  }
+
+  ._headerNav .__content .__right ._topMenuBtn .openMenu_.active{
+    display: none;
+  }
+
+  ._headerNav .__content .__right ._topMenuBtn .closeMenu_.active{
+    display: flex;
+  }
+
+  ._headerNav .__content .__nav{
+    position: absolute;
+    left: 0;
+    top: 60px;
     width: 100%;
-    height: 100vh;
+    background-color: rgb(54, 30, 30);
+    height: 0;
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.8s ease, visibility 0.8s ease;
-    z-index: 9999999;
+    transition: 0.3s ease-in-out;
   }
-  ._navContent ._navLink.show{
-    opacity: 1;
-    visibility: visible;
+
+  ._headerNav .__content .__nav.show{
+    height: 148px;
   }
-  ._navContent ._navLink ul{
-    background-color: white;
-    flex-direction: column;
-    gap: 15px;
-    justify-content: flex-end;
-    min-width: 400px;
-    min-height: 250px;
-    position: relative;
-    border-radius: 18px;
-    overflow: hidden;
-    padding: 10px 20px;
-    border: 1px solid rgb(123, 255, 0);
-  }
-  ._navContent ._navLink ._navBtn{
-    width: 100%;
-    display: block;
-    text-align: center;
-  }
-  ._navContent ._openIcon{
-    display: flex;
-  }
-  ._navContent ._closeIcon{
-    display: flex;
-    position: absolute;
-    top: 10px;
-    right: 10px;
+
+  ._headerNav .__content .__nav ul{
     background-color: black;
-    color: white;
+    border-radius: 15px;
+    height: 80%;
+    width: 95%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    justify-content: flex-start;
+  }
+
+  ._headerNav .__content .__nav ul li{
+    border-bottom: 1px solid rgb(39, 38, 38);
+    width: 100%;
+    padding: 8px;
+  }
+
+  ._headerNav .__content .__nav ul li:last-child{
+    border: none;
+  }
+
+  ._headerNav .__content .__right ._btn{
+    display: none;
   }
 }
