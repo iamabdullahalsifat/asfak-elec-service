@@ -159,7 +159,7 @@ footer *{
 }
 
 ._footerContainer ._info h3{
-  font-size: 20px;
+  font-size: 24px;
 }
 
 ._footerContainer ._info ._quickLink,  ._footerContainer ._info ._conInfo{
@@ -214,7 +214,7 @@ footer *{
 ._footerContainer ._copyright{
   max-width: 1200px;
   margin: auto;
-  padding: 30px 15px 20px;
+  padding: 18px 15px 6px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -230,7 +230,10 @@ footer *{
 @media screen and (max-width: 768px) {
   ._footerContainer ._info{
     flex-direction: column;
-    gap: 50px;
+    gap: 30px;
+  }
+  ._footerContainer ._info ._fiAll{
+    gap: 8px;
   }
   ._footerContainer ._copyright{
     padding: 20px 15px 10px;
