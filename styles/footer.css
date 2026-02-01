@@ -52,7 +52,7 @@ footer *{
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 35px;
+  gap: 30px;
 }
 ._needHelp .__container ._topIcon{
   background-color: #e23b3b;
@@ -71,14 +71,14 @@ footer *{
   justify-content: center;
   align-items: center;
   text-align: center;
-  gap: 14px;
+  gap: 8px;
 }
 ._needHelp .__container .__hero h2{
   font-size: 30px;
   font-weight: 600;
 }
 ._needHelp .__container .__hero ._long{
-  font-size: 20px;
+  font-size: 24px;
   opacity: 0.9;
 }
 ._needHelp .__container .__hero ._small{
@@ -101,7 +101,7 @@ footer *{
   justify-content: center;
   gap: 10px;
   cursor: pointer;
-  padding: 12px 30px;
+  padding: 10px 30px;
   border-radius: 10px;
 }
 ._needHelp .__container ._btn button span{
