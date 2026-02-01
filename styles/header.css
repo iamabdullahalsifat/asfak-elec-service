@@ -65,10 +65,13 @@ header ._headerNav *{
 
 ._headerNav .__content .__logo{
   width: 25%;
+  display: flex;
+  margin-top: 5px;
+  align-items: center;
 }
 
-._headerNav .__content .__logo span{
-  font-size: 25px;
+._headerNav .__content .__logo img{
+  width: 90px;
 }
 
 ._headerNav .__content .__nav{
