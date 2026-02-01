@@ -30,7 +30,8 @@ footer *{
     #3a0b16 75%,
     #0b1020 100%
   ); */
-  padding: 120px 0;
+
+  padding: 40px 0 50px;
   background-color: rgb(67, 35, 52);
 }
 
@@ -39,7 +40,7 @@ footer *{
   position: absolute;
   inset: 0;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='0.15'/%3E%3C/svg%3E");
-  opacity: 0.8;
+  opacity: 0.4;
   pointer-events: none;
 }
 
@@ -100,7 +101,7 @@ footer *{
   justify-content: center;
   gap: 10px;
   cursor: pointer;
-  padding: 15px 30px;
+  padding: 12px 30px;
   border-radius: 10px;
 }
 ._needHelp .__container ._btn button span{
@@ -187,10 +188,13 @@ footer *{
   border-radius: 25px;
 }
 
-._footerContainer ._info ._about ._heading{
-  display: flex;
-  align-items: center;
-  gap: 15px;
+._footerContainer ._info ._about ._heading div{
+  width: 80px;
+  height: 44px;
+}
+
+._footerContainer ._info ._about ._heading div img{
+  width: 100%;
 }
 
 ._footerContainer ._info ._quickLink ul{
