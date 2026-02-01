@@ -1,7 +1,18 @@
 footer{
+  position: relative;
+  overflow: hidden;
   /* background-color: #1e1f33; */
-  background-color: #111010;
+  background-color: rgb(30,32,51);
   padding: 0px 0 10px;
+}
+
+footer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='0.15'/%3E%3C/svg%3E");
+  opacity: 0.8;
+  pointer-events: none;
 }
 
 footer *{
@@ -9,16 +20,29 @@ footer *{
 }
 
 ._needHelp{
-  background: linear-gradient(
+  position: relative;
+  overflow: hidden;
+  /* background: linear-gradient(
     120deg,
     #0b1020 0%,
     #3a0b16 25%,
     #6b0f1a 50%,
     #3a0b16 75%,
     #0b1020 100%
-  );
+  ); */
   padding: 120px 0;
+  background-color: rgb(67, 35, 52);
 }
+
+._needHelp::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='0.15'/%3E%3C/svg%3E");
+  opacity: 0.8;
+  pointer-events: none;
+}
+
 ._needHelp .__container{
   max-width: 800px;
   margin: auto;

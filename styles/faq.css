@@ -22,7 +22,7 @@
   position: absolute;
   inset: 0;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='0.15'/%3E%3C/svg%3E");
-  opacity: 1;
+  opacity: 0.8;
   pointer-events: none;
 }
 
@@ -51,10 +51,9 @@
   gap: 8px;
 }
 ._faq ._faqItem{
-  /* background-color: #2b323f; */
   background: rgba(255,255,255,0.04);
-  /* backdrop-filter: blur(8px); */
-  border: 1px solid rgb(110, 106, 106);
+  /* backdrop-filter: blur(0px); */
+  border: 1px solid rgb(107, 100, 100);
   border-radius: 12px;
 }
 ._faqItem ._faqHeading{
@@ -81,7 +80,7 @@
   transition: height 0.3s ease;
 }
 ._faqItem ._faqParagraph p{
-  border-top: 1px solid rgb(68, 65, 65);
+  border-top: 1px solid rgb(107, 100, 100);
   padding: 12px 15px 6px;
   opacity: 0.9;
 }
